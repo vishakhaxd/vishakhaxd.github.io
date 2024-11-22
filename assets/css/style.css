@@ -168,8 +168,8 @@ nav{
 .featured-box {
     display: flex;
     /* flex-wrap: wrap;  */
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     height: 100vh;
     padding: 20px;
 }
@@ -242,8 +242,8 @@ nav{
 /* ----- FEATURED IMAGE BOX ----- */
 .featured-image {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: right;
+    align-items: right;
     margin-top: 20px;
 }
 .image{
