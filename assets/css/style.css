@@ -162,17 +162,19 @@ nav{
 .wrapper{
     padding-inline: 10vw;
     padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 /* ----- FEATURED BOX ----- */
 .featured-box {
     display: flex;
     /* flex-wrap: wrap;  */
-    justify-content: left;
-    align-items: left;
-    height: 100vh;
-    padding: 20px;
-    width: 20%;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    padding-top: 100px;
+    padding-bottom: 150px;
+    
 }
 
 /* ----- FEATURED TEXT BOX ----- */
@@ -183,12 +185,18 @@ nav{
     flex-direction:column;
     padding-block: 20px;
     padding-inline: 20px;
-    width: 50%; /* Changed from 200% to 100% */
-    background: rgb(58, 58, 58);
-    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+    width: 100%; /* Changed from 200% to 100% */
+    background: black;
+    background-blend-mode:luminosity;
+    background-size:auto;
+    box-sizing:10px;
+    box-shadow: 1px 10px 10px 2px white;
     border-radius: 10px;
-    padding-right: 10px;
+    margin-bottom: 50px;
+    margin-top: 60px;
+    /* padding-right: 10px; */
 }
+
 .featured-text-card span{
     background: var(--third-color);
     color: var(--color-white);
@@ -210,17 +218,9 @@ nav{
 .featured-text-info{
     font-size: 15px;
     margin-bottom: 10px;
-    color: var(--text-color-second);
+    color: white;
 }
 
-.featured-text-btn>.blue-btn{
-    background: var(--first-color);
-    color: var(--color-white);
-    padding: 15px;
-}
-.featured-text-btn>.blue-btn:hover{
-    background: var(--first-color-hover);
-}
 .social_icons{
     display: flex;
     margin-top: 5em;
@@ -242,10 +242,13 @@ nav{
 
 /* ----- FEATURED IMAGE BOX ----- */
 .featured-image {
+    /* flex: 1 1 50%;  */
     display: flex;
     justify-content: right;
     align-items: right;
-    margin-top: 20px;
+    margin-top: 50px;
+    margin-left: 20px;
+    
 }
 .image{
     margin: auto 0;
@@ -253,11 +256,13 @@ nav{
     height: 380px;
     border-radius: 55%;
     overflow: hidden;
+    padding: 20 px;
 }
 .image img{
     width: 380px;
     height: 380px;
-    object-fit: cover;
+    object-fit: cover
+
 }
 
 .scroll-icon-box {
