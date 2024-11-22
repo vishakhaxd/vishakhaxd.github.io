@@ -241,7 +241,6 @@ nav{
 
 /* ----- FEATURED IMAGE BOX ----- */
 .featured-image {
-    flex: 1 1 50%; /* Allow resizing and take up 50% of width */
     display: flex;
     justify-content: center;
     align-items: center;
