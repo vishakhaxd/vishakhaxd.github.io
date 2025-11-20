@@ -21,19 +21,43 @@
       --shadow:0 8px 30px rgba(50,50,93,.08),0 4px 12px rgba(0,0,0,.06);
       --radius:18px;
     }
+
     *{box-sizing:border-box}
     body{
       margin:0; font-family:Nunito,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
       color:var(--ink); background: linear-gradient(140deg,var(--bg),var(--bg2));
       background-attachment: fixed;
     }
+
     .container{width:min(1100px,92%); margin:0 auto}
     a{color:#4a63ff; text-decoration:none}
     a:hover{text-decoration:underline}
 
+    /* Animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0); }
+    }
+
+    .animated { animation: fadeUp 0.8s ease forwards; }
+    .float { animation: float 6s ease-in-out infinite; }
+
     header{padding:70px 0 40px}
-    .hero{display:grid; grid-template-columns: 1.1fr .9fr; gap:24px; align-items:center}
-    .card{background:var(--card); border:1px solid rgba(0,0,0,.06); box-shadow:var(--shadow); border-radius:var(--radius); padding:24px}
+    .hero{
+      display:grid; grid-template-columns: 1.1fr .9fr; gap:24px; align-items:center
+    }
+
+    .card{
+      background:var(--card); border:1px solid rgba(0,0,0,.06);
+      box-shadow:var(--shadow); border-radius:var(--radius); padding:24px
+    }
+
     h1{font-size:clamp(28px,4vw,44px)}
     h2{font-size:clamp(22px,3vw,28px)}
 
@@ -45,11 +69,11 @@
 
 <header class="container">
   <div class="hero">
-    <div class="card">
+    <div class="card animated">
       <h1>Vishakha Dikshit</h1>
       <p>I am a software developer specializing in low-latency, high data volume systems. I have also deployed multiple machine learning models in production environments.</p>
     </div>
-    <div class="card">
+    <div class="card float">
       <img src="assets/images/IMG_7856.JPG" alt="Vishakha Dikshit" style="width:100%; border-radius:16px;">
     </div>
   </div>
@@ -57,8 +81,18 @@
 
 <main class="container">
 
+<!-- About Me -->
+<section id="about" class="animated">
+  <h2>About Me</h2>
+  <div class="item">
+    <p>
+      I enjoy making data- and evidence-driven decisions, which makes me highly observant and analytical. My interests span psychology, filmmaking, yoga, and strategic games. I am also passionate about giving back and currently volunteer with the Girl Scouts, supporting community-driven learning and empowerment.
+    </p>
+  </div>
+</section>
+
 <!-- Research -->
-<section id="research">
+<section id="research" class="animated">
   <h2>Research</h2>
   <div class="item">
     <p>
@@ -72,7 +106,7 @@
 </section>
 
 <!-- Websites Hosting -->
-<section id="hosting">
+<section id="hosting" class="animated">
   <h2>Websites I Am Currently Hosting</h2>
   <div class="item">
     <p>Please contact me for any feedback or collaboration at <a href="mailto:vishakha.d933@gmail.com">vishakha.d933@gmail.com</a></p>
@@ -84,7 +118,7 @@
 </section>
 
 <!-- GitHub Projects -->
-<section id="github-projects">
+<section id="github-projects" class="animated">
   <h2>GitHub Projects</h2>
   <div class="item">
     <p>
@@ -94,7 +128,7 @@
 </section>
 
 <!-- Mentorship & Teaching -->
-<section id="mentorship">
+<section id="mentorship" class="animated">
   <h2>Mentorship & Teaching</h2>
   <div class="item">
     <p>
